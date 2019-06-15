@@ -19,6 +19,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import java.util.ArrayList;
+/*  Unused import statements kept for reference
+import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.LinearLayout;
+*/
 
 public class NumbersActivity extends AppCompatActivity {
 
