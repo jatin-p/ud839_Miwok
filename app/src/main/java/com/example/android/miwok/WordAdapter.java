@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
     public WordAdapter(@NonNull Context context, int resource, ArrayList<Word> words) {
-        super(context, resource, words);
+        super(context, 0, words);
     }
 
     @NonNull
