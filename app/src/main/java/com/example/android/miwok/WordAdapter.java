@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -40,6 +41,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the version number from the current Word object and
         // set this text on the number TextView
         defaultTextView.setText(currentWord.getDefaultTranslation());
+
+        // Find the ImageView in the list_item.xml layout with the ID list_item_icon
+        ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
+        // Get the image resource ID from the current AndroidFlavor object and
+        // set the image to iconView
+        iconView.setImageResource(currentWord.getImageResourceID());
+
+
         return listItemView;
     }
 }
