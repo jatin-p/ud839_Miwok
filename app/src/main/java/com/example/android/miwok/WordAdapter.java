@@ -44,9 +44,16 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
-        // Get the image resource ID from the current AndroidFlavor object and
-        // set the image to iconView
-        iconView.setImageResource(currentWord.getImageResourceID());
+        if (currentWord.hasImage()){
+            // Get the image resource ID from the current AndroidFlavor object and
+            // set the image to iconView
+            iconView.setImageResource(currentWord.getImageResourceID());
+            // Make sure the view is visible
+            iconView.setVisibility(View.VISIBLE);
+        } else {
+            // Make sure the view is hidden
+            iconView.setVisibility(View.GONE);
+        }
 
 
         return listItemView;
