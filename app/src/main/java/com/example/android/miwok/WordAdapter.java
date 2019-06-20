@@ -9,12 +9,19 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.support.v4.content.ContextCompat;
+
 
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
-    public WordAdapter(@NonNull Context context, int resource, ArrayList<Word> words) {
+
+    /** Resource ID for the background color for this list of words */
+    private int mColorResourceId;
+
+    public WordAdapter(@NonNull Context context, ArrayList<Word> words, int colorResourceId) {
         super(context, 0, words);
+        mColorResourceId = colorResourceId;
     }
 
     @NonNull
@@ -54,6 +61,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
             // Make sure the view is hidden
             iconView.setVisibility(View.GONE);
         }
+
+        // Set the theme color for the list item
+        View textContainer = listItemView.findViewById(R.id.text_container);
+        // Find the color that the resource ID maps to
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
+        // Set the background color of the text container View
+        textContainer.setBackgroundColor(color);
 
 
         return listItemView;
