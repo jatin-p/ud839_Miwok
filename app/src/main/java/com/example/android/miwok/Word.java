@@ -10,15 +10,19 @@ public class Word {
 
     private static final int NO_IMAGE = -1;
 
-    public Word(String defaultTranslation, String miwokTranslation){
+    private int mAudioResourceID;
+
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceID){
         mMiwokTranslation=miwokTranslation;
         mDefaultTranslation=defaultTranslation;
+        mAudioResourceID=audioResourceID;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID){
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID, int audioResourceID){
         mMiwokTranslation=miwokTranslation;
         mDefaultTranslation=defaultTranslation;
         mImageResourceID=imageResourceID;
+        mAudioResourceID=audioResourceID;
     }
 
     public String getDefaultTranslation (){
@@ -30,6 +34,7 @@ public class Word {
     public int getImageResourceID() {
         return mImageResourceID;
     }
+    public int getAudioResourceID(){return mAudioResourceID;}
 
     /**
      * Returns whether or not there is an image for this word.
