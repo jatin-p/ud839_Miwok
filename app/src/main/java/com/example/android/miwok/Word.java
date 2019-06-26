@@ -40,4 +40,17 @@ public class Word {
      * Returns whether or not there is an image for this word.
      */
     public boolean hasImage() {return mImageResourceID != NO_IMAGE;}
+
+    /**
+     * @return Sting representation of word object to print to logs
+     */
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mImageResourceID=" + mImageResourceID +
+                ", mAudioResourceID=" + mAudioResourceID +
+                '}';
+    }
 }
