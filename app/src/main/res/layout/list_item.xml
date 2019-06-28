@@ -13,7 +13,8 @@
         android:layout_width="@dimen/list_item_height"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        tools:src="@mipmap/ic_launcher"/>
+        tools:src="@mipmap/ic_launcher" />
+
     <LinearLayout
         android:id="@+id/text_container"
         android:orientation="vertical"
@@ -23,6 +24,7 @@
         android:layout_toRightOf="@id/list_item_icon"
         android:paddingLeft="16dp"
         tools:background="@color/category_numbers">
+
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
@@ -31,8 +33,8 @@
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            tools:text="lutti"
-            />
+            tools:text="lutti" />
+
         <TextView
             android:id="@+id/english_text_view"
             android:layout_width="match_parent"
@@ -41,8 +43,7 @@
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            tools:text="one"
-            />
+            tools:text="one" />
     </LinearLayout>
 
     <ImageView
@@ -50,6 +51,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:marginRight="16dp"
+        android:layout_marginRight="16dp"
         android:src="@drawable/baseline_play_arrow_white_36" />
 </RelativeLayout>
