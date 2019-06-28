@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/list_item_height"
     android:background="@color/tan_background"
     android:minHeight="@dimen/list_item_height">
 
-<ImageView
+    <ImageView
         android:id="@+id/list_item_icon"
         android:layout_height="@dimen/list_item_height"
         android:layout_width="@dimen/list_item_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         tools:src="@mipmap/ic_launcher"/>
     <LinearLayout
         android:id="@+id/text_container"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/list_item_icon"
         android:paddingLeft="16dp"
         tools:background="@color/category_numbers">
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
@@ -32,7 +36,7 @@
         <TextView
             android:id="@+id/english_text_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
@@ -40,4 +44,12 @@
             tools:text="one"
             />
     </LinearLayout>
-</LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:marginRight="16dp"
+        android:src="@drawable/baseline_play_arrow_white_36" />
+</RelativeLayout>
